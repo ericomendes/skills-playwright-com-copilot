@@ -2,6 +2,15 @@
 
 **Parabéns!** Você concluiu o exercício **Playwright com Copilot: MCP, Skills e TDD**.
 
+### Bônus opcional: cancelamento da Newsletter
+
+Há uma atividade opcional de até 30 minutos para praticar o fluxo com custom agents e TDD:
+
+- [Requisitos do bônus](bonus-unsubscribe-requirements.md)
+- [Atividade com custom agents](bonus-agents-unsubscribe.md)
+
+Este bônus é opcional e não faz parte da conclusão obrigatória do exercício. Ele simula o cancelamento em memória e não altera workflows obrigatórios.
+
 ### O que você fez
 
 1. Abriu um **Codespace** pronto, com Node.js, Playwright e Chromium.

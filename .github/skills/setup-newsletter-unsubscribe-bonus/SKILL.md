@@ -1,18 +1,18 @@
 ---
-agent: 'agent'
-description: 'Prepara sob demanda o bônus de descadastro da Newsletter do Pinguim com requisitos, roteiro TDD e custom agents.'
+name: setup-newsletter-unsubscribe-bonus
+description: Prepara sob demanda o bônus opcional de descadastro da Newsletter do Pinguim, incluindo requisitos, roteiro TDD, custom agents e orquestração. Use quando o usuário pedir para configurar ou preparar este bônus.
 ---
 
 # Preparar bônus opcional de descadastro
 
-Configure no repositório, somente quando este prompt for executado, uma atividade bônus para adicionar descadastro self-service à Newsletter do Pinguim usando custom agents e TDD. Este prompt prepara o material e os agentes; **não implementa a feature da aplicação**.
+Configure no repositório, somente quando esta skill for acionada, uma atividade bônus para adicionar descadastro self-service à Newsletter do Pinguim usando custom agents e TDD. Esta skill prepara o material e os agentes; **não implementa a feature da aplicação**.
 
 ## 1. Inspecione antes de alterar
 
 - Leia as instruções do repositório, `public/index.html`, `public/app.js`, os testes Playwright existentes, `playwright.config.js` e `.github/steps/x-review.md`.
 - Consulte `git status` e preserve alterações existentes.
 - Confirme como o formulário de inscrição funciona hoje. Não assuma que a implementação do exercício já está completa.
-- Verifique as instruções atuais do VS Code para custom agents e prompt files quando precisar confirmar frontmatter, caminhos ou delegação.
+- Verifique as instruções atuais do VS Code para custom agents e skill/prompt files quando precisar confirmar frontmatter, caminhos ou delegação.
 - Não altere arquivos do app, testes, workflows, dependências ou configuração do MCP. Não execute o exercício de descadastro.
 
 ## 2. Escopo fixo dos requisitos
@@ -30,7 +30,7 @@ Não transforme o exercício em descadastro real de uma lista de e-mails: é uma
 
 ## 3. Obtenha os custom agents somente agora
 
-O repositório não deve receber esses agentes antes da execução deste prompt. Como esta execução é o setup sob demanda:
+O repositório não deve receber esses agentes antes da execução desta skill. Como esta execução é o setup sob demanda:
 
 - Consulte e obtenha as versões atuais dos seguintes arquivos em `https://github.com/github/awesome-copilot/tree/main/agents`:
   - `plan.agent.md`
@@ -50,7 +50,7 @@ Crie `.github/steps/bonus-agents-unsubscribe.md` em português, como atividade o
 - mostrar como selecionar e executar o agente orquestrador;
 - explicar a sequência e os handoffs: planejamento, inspeção do browser com Playwright, RED, GREEN, refactor e verificação final;
 - dizer que cada agente recebe os requisitos e o resultado da fase anterior;
-- explicar que a configuração inicial dos agentes só ocorre ao executar este prompt;
+- explicar que a configuração inicial dos agentes só ocorre ao executar esta skill;
 - incluir critérios manuais de conferência, comandos de teste existentes e limitações de estado em memória;
 - deixar explícito que nenhum workflow obrigatório é adicionado ou alterado.
 
@@ -74,6 +74,6 @@ Atualize `.github/steps/x-review.md` com uma seção curta que apresente os dois
 
 - Confirme que foram criados apenas os documentos do bônus, os custom agents previstos e a referência opcional na revisão final.
 - Confirme que nenhum workflow, código de produção, teste existente ou dependência foi alterado.
-- Verifique manualmente a sintaxe/frontmatter dos prompt/agent files e os links relativos entre os documentos.
+- Verifique manualmente a sintaxe/frontmatter dos arquivos de skill/agent e os links relativos entre os documentos.
 - Inspecione o diff final e relate arquivos criados/alterados, agentes obtidos e qualquer limitação.
 - Não alegue que a feature foi implementada nem que os testes do futuro descadastro passaram.
